@@ -51,8 +51,12 @@ You will need to use the slice() method and specify where to start and where to 
 ## ![:rotating_light:](https://forum.freecodecamp.com/images/emoji/emoji_one/rotating_light.png?v=3 ":rotating_light:") Advanced Code Solution:
 
     function truncateString(str, num) {
-      return (str.length > num)?(str.slice(0,num)+"..."):str;
+      if (num >= str.length) {
+        return str;
+      }
+      return str.slice(0, num) + '...';
     }
+
 
 ![:rocket:](https://forum.freecodecamp.com/images/emoji/emoji_one/rocket.png?v=3 ":rocket:") <a href='https://repl.it/CLjU/54' target='_blank' rel='nofollow'>Run Code</a>
 
